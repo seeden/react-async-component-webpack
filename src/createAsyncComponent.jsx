@@ -10,7 +10,7 @@ export default (options) => {
   const {
     resolve,
     preload,
-    loading: Loading = null,
+    loading: Loading,
   } = options;
   let module = null;
 
@@ -74,9 +74,7 @@ export default (options) => {
       }
 
       if (!ModuleComponent) {
-        return (
-          <Loading />
-        );
+        return Loading ? <Loading /> : null;
       }
 
       return <ModuleComponent {...rest} />;
