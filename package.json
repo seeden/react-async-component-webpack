@@ -1,6 +1,6 @@
 {
   "name": "react-async-component-webpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Resolve components asynchronously, with support for code splitting and server side rendering",
   "author": {
     "name": "Zlatko Fedor",
