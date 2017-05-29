@@ -24,7 +24,7 @@ export default (options) => {
     };
 
     static contextTypes = {
-      registerChunk: PropTypes.object,
+      registerChunk: PropTypes.func,
     };
 
     static async resolveModule() {
@@ -47,7 +47,7 @@ export default (options) => {
     }
 
     componentWillMount() {
-      if (this.context.registerChunk) {
+      if (typeof this.context.registerChunk === 'function') {
         this.context.registerChunk(options);
       }
 
